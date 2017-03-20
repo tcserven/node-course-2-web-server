@@ -2,6 +2,7 @@ const express = require('express');
 // const ejs = require('ejs');
 const fs = require('fs');
 var app = express();
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
@@ -48,6 +49,9 @@ app.get('/bad', function(req, res){
 
 
 
-app.listen(3000, function() {
-	console.log('Server is up on port 3000!');
+// app.listen(3000, function() {
+// 	console.log('Server is up on port 3000!');
+// });
+app.listen(port, function() {
+	console.log('Server is up on port ' + port);
 });
